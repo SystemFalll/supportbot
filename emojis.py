@@ -1,0 +1,5 @@
+emoji_up = '⬆️'
+emoji_down = '⬇️'
+emoji_check = '✅'
+emoji_uncheck = '🚫'
+logo_systemfall = ''

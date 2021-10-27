@@ -1,6 +1,9 @@
 from flask import Flask
 from threading import Thread
+import sys
 
+cli = sys.modules['flask.cli']
+cli.show_server_banner = lambda *x: None
 app = Flask('')
 
 @app.route('/')
