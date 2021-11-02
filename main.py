@@ -5,6 +5,8 @@ from os import system, name
 from discord.ext import commands
 from discord.ext.commands import has_permissions
 
+test
+
 def get_prefix(client,message):
     prefix = db[f'prefix_{message.guild.id}']
     return prefix
@@ -17,7 +19,7 @@ logo_systemfall = pyfiglet.figlet_format('By SystemFall')
 async def on_ready():
     clear()
     print(logo_systemfall)
-    print(f'BOT enabled as {client.user}!') 
+    print(f'BOT enabled as {client.user}!')
 
 @client.event
 async def on_guild_join(guild):
@@ -182,7 +184,7 @@ def clear():
         _ = system('cls')
     else:
         _ = system('clear')
-  
+
 keep_alive.keep_alive()
 client.loop.create_task(chpr())
 client.run(my_secret)
