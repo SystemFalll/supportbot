@@ -5,8 +5,6 @@ from os import system, name
 from discord.ext import commands
 from discord.ext.commands import has_permissions
 
-test
-
 def get_prefix(client,message):
     prefix = db[f'prefix_{message.guild.id}']
     return prefix
@@ -135,10 +133,8 @@ async def deny(ctx, strid, *, reason):
         return
 
     id = int(strid)
-    message = channel.fetch_message(id)
-    user = message.author
+    user = ctx.message.server.get_member(id)
     embed = message.embeds[0]
-
 
     await user.send('The following suggestion was denied:')
     await user.send(embed=embed)
